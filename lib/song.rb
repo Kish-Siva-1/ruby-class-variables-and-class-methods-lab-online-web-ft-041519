@@ -14,12 +14,12 @@ class Song
     @name = song_name
   end 
 
-  def new(name, artist, genre)
+  def new(song_name, artist_name, genre_type)
     @name = song_name
     @@genres << genre_type
     @@artists << artist_name
     @artist = artist_name
-    @genre = genre
+    @genre = genre_type
   end
 
   def name
