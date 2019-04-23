@@ -54,8 +54,7 @@ class Song
   
   def self.genre_count 
     @@genre_count = {}
-    binding.pry
-    @@genre_count.each do |genre, count|
+    @@genre_count.collect do |genre, count|
       genre = @genre
       count = @@genres.count(@genre)
     end 
