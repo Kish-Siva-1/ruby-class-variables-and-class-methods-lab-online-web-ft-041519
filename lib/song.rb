@@ -56,8 +56,8 @@ class Song
     @@genre_count = {}
     binding.pry
     @@genre_count.each do |genre, count|
-      genre = @@genres
-      count = @genres.count(@@genres)
+      genre = @@genres.uniq!
+      count = @genres.count(genre)
     end 
   end
 
