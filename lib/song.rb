@@ -55,17 +55,17 @@ class Song
   def self.genre_count 
     @@genre_count = {}
     count = 0
-    @@genre_count.each do |genre, count| 
-      genre << @genre[count]
-      count << @@genres.count(@genre[count])
-      count += 1 
-    end 
-    
-  def num_counter @@genres
-    nums.inject(Hash.new(0)) do |hash, e|
+    #@@genre_count.each do |genre, count| 
+     # genre << @genre[count]
+      #count << @@genres.count(@genre[count])
+      #count += 1 
+    #end 
+  def num_counter 
+    @@genres.inject(Hash.new(0)) do |hash, e|
     hash[e] += 1
     hash
   end
+  binding.pry
 end
     
     binding.pry
