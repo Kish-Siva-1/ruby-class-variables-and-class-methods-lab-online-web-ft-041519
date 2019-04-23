@@ -56,7 +56,7 @@ class Song
     @@genre_count = {}
     count = 0
     
-    @@genres.collect!(Hash.new(0)) do |hash, e|
+    @@genres.collect!(@@genre_count) do |hash, e|
       hash[e] += 1
       hash
     end
