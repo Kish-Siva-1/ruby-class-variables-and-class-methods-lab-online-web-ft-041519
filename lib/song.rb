@@ -61,7 +61,7 @@ class Song
       count += 1 
     end 
     
-  def num_counter nums
+  def num_counter @genre
     nums.inject(Hash.new(0)) do |hash, e|
     hash[e] += 1
     hash
