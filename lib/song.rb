@@ -44,12 +44,12 @@ class Song
   
   def self.artists 
     @artist = @@artists
-    @@artists.uniq
+    @@artists.uniq!
   end
   
   def self.genres 
     @genre = @@genres
-    @@genres.uniq
+    @@genres.uniq!
   end
   
   def self.genre_count 
