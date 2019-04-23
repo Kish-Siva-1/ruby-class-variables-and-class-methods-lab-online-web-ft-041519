@@ -53,7 +53,11 @@ class Song
   end
   
   def self.genre_count 
-    @@genre_count = {}
+    @@genre_count = {@genre => @genre}
+    @@genre.collect do |genre, count| 
+      genre = 
+      count = @@genres.count(@genre)
+    end 
     @@genre_count = @@genres.group_by{|genre| @genre}
     binding.pry
   end
