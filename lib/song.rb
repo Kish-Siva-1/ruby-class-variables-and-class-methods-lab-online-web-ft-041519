@@ -60,11 +60,15 @@ class Song
       #count << @@genres.count(@genre[count])
       #count += 1 
     #end 
-  def num_counter 
-    @@genres.inject(Hash.new(0)) do |hash, e|
+  def num_counter nums
+    nums.inject(Hash.new(0)) do |hash, e|
     hash[e] += 1
     hash
   end
+  
+  
+  
+end
   binding.pry
 end
     
