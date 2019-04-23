@@ -13,17 +13,17 @@ class Song
     @@count += 1
     @@genres << genre_type
     @@artists << artist_name
-    @name << song_name
-    @artist << artist_name
-    @genre << genre_type
+    @name = song_name
+    @artist = artist_name
+    @genre = genre_type
   end 
 
   def new(song_name, artist_name, genre_type)
-    @name << song_name
+    @name = song_name
     @@genres << genre_type
     @@artists << artist_name
-    @artist << artist_name
-    @genre << genre_type
+    @artist = artist_name
+    @genre = genre_type
   end
 
   def name
@@ -43,10 +43,12 @@ class Song
   end 
   
   def self.artists 
+    @artist = @@artists
     @@artists.uniq
   end
   
   def self.genres 
+    @genre = @@genres
     @@genres.uniq
   end
   
