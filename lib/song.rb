@@ -52,7 +52,7 @@ class Song
     @@genre_count = {}
     @@genre_count.each do |genre, count|
       genre = @@genres
-      @genres.count()
+      count = @genres.count(@@genres)
     end 
   end
 
