@@ -58,6 +58,7 @@ class Song
       genre = @genre
       count = @@genres.count(@genre)
     end 
+    @@genre_count
   end
 
   def self.artist_count 
